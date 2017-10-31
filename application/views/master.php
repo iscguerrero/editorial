@@ -6,134 +6,137 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo $this->e($title)?></title>
-		<link rel='icon' type='image/jpeg' href="<?php echo base_url('resources/images/site-ico-2.png')?>" />
-		<link rel="stylesheet" href="<?php echo base_url('resources/bootstrap/dist/css/bootstrap.min.css')?>">
-		<link rel="stylesheet" href="<?php echo base_url('resources/font-awesome/css/font-awesome.min.css')?>">
-		<link rel="stylesheet" href="<?php echo base_url('resources/nprogress/nprogress.css')?>">
-		<link rel="stylesheet" href="<?php echo base_url('resources/datetimepicker/build/css/bootstrap-datetimepicker.css')?>">
-		<link rel="stylesheet" href="<?php echo base_url('resources/toastr/toastr.min.css')?>">
-		<link rel="stylesheet" href="<?php echo base_url('resources/font-awesome/css/font-awesome.min.css')?>">
-		<link rel="stylesheet" href="<?php echo base_url('resources/switchery/dist/switchery.min.css')?>">
-		<link rel="stylesheet" href="<?php echo base_url('public/css/custom.min.css')?>">
-		<link rel="stylesheet" href="<?php echo base_url('public/css/comun.css')?>">
+		<link rel="stylesheet" href="<?php echo base_url('resources/css/main.css')?>">
 		<?php echo $this->section('extra_style')?>
 	</head>
-	<body class="nav-md">
+	<body>
 
-		<div class="container body">
-			<div class="main_container">
-				<div class="col-md-3 left_col">
-					<div class="left_col scroll-view">
-						<div class="navbar nav_title" style="border: 0;">
-							<a href="<?php echo site_url('Inicio') ?>" class="site_title"><img src="<?php echo base_url('resources/images/site-ico.png')?>" class="img-responsive" alt="..."></a>
-						</div>
-						<div class="clearfix"></div>
-						<!-- menu profile quick info -->
-						<div class="profile clearfix">
-							<div class="profile_pic">
-								<img src="<?php echo base_url('resources/images/user.png')?>" alt="..." class="img-circle profile_img">
-							</div>
-							<div class="profile_info">
-								<span>Bienvenido,</span>
-								<h2><?php echo $_SESSION['nickname'] ?></h2>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<!-- /menu profile quick info -->
-						<br />
-						<!-- sidebar menu -->
-						<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-							<div class="menu_section">
-								<h3>Menu principal</h3>
-								<ul class="nav side-menu">
-									<li><a><i class="fa fa-line-chart"></i> Clientes <span class="fa fa-chevron-down"></span></a>
-										<ul class="nav child_menu">
-											<li><a href="<?php echo site_url('Inicio/Top5') ?>">Top 5</a></li>
-											<li><a href="<?php echo site_url('Inicio/estadisticasMensuales') ?>">Estadísticas Mensuales</a></li>
-										</ul>
-									</li>
-									<li><a><i class="fa fa-cogs"></i> Administración <span class="fa fa-chevron-down"></span></a>
-										<ul class="nav child_menu">
-											<li><a href="<?php echo site_url('Administracion/Clientes') ?>">Clientes</a></li>
-											<li><a href="<?php echo site_url('Administracion/Top5') ?>">Top 5</a></li>
-											<li><a href="<?php echo site_url('Administracion/Estadisticas') ?>">Estadísticas</a></li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- /sidebar menu -->
-					</div>
-				</div>
-				<!-- top navigation -->
-				<div class="top_nav">
-					<div class="nav_menu">
-						<nav>
-							<div class="nav toggle">
-								<a id="menu_toggle"><i class="fa fa-bars"></i></a>
-							</div>
-							<ul class="nav navbar-nav navbar-right">
-								<li class="">
-									<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-										<img src="<?php echo base_url('resources/images/user.png')?>" alt=""><?php echo $_SESSION['nickname'] ?>
-										<span class=" fa fa-angle-down"></span>
-									</a>
-									<ul class="dropdown-menu dropdown-usermenu pull-right">
-										<li><a href="javascript:;"> Perfil</a></li>
-										<li><a href="javascript:;">Ayuda</a></li>
-										<li><a href="<?php echo site_url('Login/Salir') ?>"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
+
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Editorial</strong> </a>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
 									</ul>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<!-- /top navigation -->
+								</header>
 
-				<!-- page content -->
-				<?php echo $this->section('page')?>
-				<!-- /page content -->
+								<?php echo $this->section('page')?>
 
-				<!-- footer content -->
-				<footer>
-					<div class="pull-right">
-						rompemurosmx Copyright © 2017. All Right Reserved.
+						</div>
 					</div>
-					<div class="clearfix"></div>
-				</footer>
-				<!-- /footer content -->
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+ 							-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="generic.html">Info de la Industria</a></li>
+										<li><a href="elements.html">Administracion</a></li>
+										<li>
+											<span class="opener">Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Recursos Humanos</a></li>
+										<li><a href="#">Logistica</a></li>
+										<li>
+											<span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Produccion</a></li>
+										<li><a href="#">Ventas</a></li>
+										<li><a href="#">Tesoreria</a></li>
+										<li><a href="#">Fianzas</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Articulos de interes</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contacto</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">QBusiness@team.com</a></li>
+										<li class="fa-phone">(01 800) 123-45678</li>
+										<li class="fa-home">Av. Universidad #8254<br />
+										Queretaro,Qro</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+						<!-- 			<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
+								</footer>
+
+						</div>
+					</div>
+
 			</div>
-		</div>
-		<script src="<?php echo base_url('resources/jquery/dist/jquery.min.js')?>"></script>
-		<script src="<?php echo base_url('resources/bootstrap/dist/js/bootstrap.min.js')?>"></script>
-		<script src="<?php echo base_url('resources/fastclick/lib/fastclick.js')?>"></script>
-		<script src="<?php echo base_url('resources/nprogress/nprogress.js')?>"></script>
-		<script src="<?php echo base_url('resources/moment/min/moment.min.js')?>"></script>
-		<script src="<?php echo base_url('resources/moment/locale/es.js')?>"></script>
-		<script src="<?php echo base_url('resources/datetimepicker/build/js/bootstrap-datetimepicker.min.js')?>"></script>
-		<script src="<?php echo base_url('resources/Chart.js/dist/Chart.min.js')?>"></script>
 
 
-		<!-- jQuery Sparklines -->
-		<script src="<?php echo base_url('resources/jquery-sparkline/dist/jquery.sparkline.min.js')?>"></script>
-		<!-- Flot -->
-		<script src="<?php echo base_url('resources/Flot/jquery.flot.js')?>"></script>
-		<script src="<?php echo base_url('resources/Flot/jquery.flot.pie.js')?>"></script>
-		<script src="<?php echo base_url('resources/Flot/jquery.flot.time.js')?>"></script>
-		<script src="<?php echo base_url('resources/Flot/jquery.flot.stack.js')?>"></script>
-		<script src="<?php echo base_url('resources/Flot/jquery.flot.resize.js')?>"></script>
-		<!-- Flot plugins -->
-		<script src="<?php echo base_url('resources/flot.orderbars/js/jquery.flot.orderBars.js')?>"></script>
-		<script src="<?php echo base_url('resources/flot-spline/js/jquery.flot.spline.min.js')?>"></script>
-		<script src="<?php echo base_url('resources/flot.curvedlines/curvedLines.js')?>"></script>
 
-		<!-- DateJS -->
-		<script src="<?php echo base_url('resources/DateJS/build/date.js')?>"></script>
-
-		<script src="<?php echo base_url('resources/toastr/toastr.min.js')?>"></script>
-		<script src="<?php echo base_url('resources/switchery/dist/switchery.min.js')?>"></script>
-		<script src="<?php echo base_url('/public/js/custom.js')?>"></script>
-		<script src="<?php echo base_url('/public/js/comun.js')?>"></script>
+		<script src="<?php echo base_url('resources/js/jquery.min.js')?>"></script>
+		<script src="<?php echo base_url('resources/js/skel.min.js')?>"></script>
+		<script src="<?php echo base_url('resources/js/util.js')?>"></script>
+		<script src="<?php echo base_url('resources/js/main.js')?>"></script>
 		<?php echo $this->section('extra_js')?>
 	</body>
 </html>

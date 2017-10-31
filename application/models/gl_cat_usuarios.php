@@ -50,17 +50,6 @@ class gl_cat_usuarios extends Base_Model{
 		return password_verify($contrasenia, $hash);
 	}
 
-	# Funcion para obtener la lista de usuarios
-	public function obtenerClientes($estatus){
-		$this->db->select('gcu.cve_usuario, nombre, correo, facebook, twitter, instagram, paginaweb, estatus');
-		$this->db->from('gl_cat_usuarios gcu');
-		$this->db->join('vn_detalles_cliente vdc', 'gcu.cve_usuario = vdc.cve_usuario', 'INNER');
-		$this->db->where('cve_perfil', '002');
-		if($estatus == 'A') $this->db->where('estatus', 'A');
-		$query = $this->db->get();
-		return $query->result();
-	}
-
 	# Metodo para editar la informacion de un cliente
 	public function editarUsuario($cve_usuario, $nombre, $correo){
 		$this->db->set('nombre', $nombre);
