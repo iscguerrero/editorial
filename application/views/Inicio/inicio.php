@@ -19,7 +19,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
+										<img src="<?php echo base_url('resources/images/pic10.jpg') ?>" alt="" />
 									</span>
 								</section>
 
