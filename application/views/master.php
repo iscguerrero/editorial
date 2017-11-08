@@ -55,7 +55,7 @@
 										<h2>Hola <?php echo $_SESSION['nickname'] ?>!</h2>
 									</header>
 									<ul>
-										<?php echo $this->e($sitemap)?>
+										<?php $this->insert('partials/menu') ?>
 									</ul>
 								</nav>
 

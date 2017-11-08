@@ -9,62 +9,19 @@ class Site extends Base_Controller{
 
 	# Metodo para retornar la pagina princial del sitio
 	public function Inicio(){
-		$sitemap = '';
-		if($this->session->userdata('perfil') == '001') {
-			$sitemap = "
-				<li><a href='index.html'>Home</a></li>
-				<li><a href='generic.html'>Info de la Industria</a></li>
-				<li><a href='elements.html'>Administracion</a></li>
-				<li>
-					<span class='opener'>Submenu</span>
-					<ul>
-						<li><a href='#'>Lorem Dolor</a></li>
-						<li><a href='#'>Ipsum Adipiscing</a></li>
-						<li><a href='#'>Tempus Magna</a></li>
-						<li><a href='#'>Feugiat Veroeros</a></li>
-					</ul>
-				</li>
-				<li><a href='#'>Recursos Humanos</a></li>
-				<li><a href='#'>Logistica</a></li>
-				<li>
-					<span class='opener'>Another Submenu</span>
-					<ul>
-						<li><a href='#'>Lorem Dolor</a></li>
-						<li><a href='#'>Ipsum Adipiscing</a></li>
-						<li><a href='#'>Tempus Magna</a></li>
-						<li><a href='#'>Feugiat Veroeros</a></li>
-					</ul>
-				</li>
-				<li><a href='#'>Produccion</a></li>
-				<li><a href='#'>Ventas</a></li>
-				<li><a href='#'>Tesoreria</a></li>
-				<li><a href='#'>Fianzas</a></li>
-			";
+		echo $this->templates->render('inicio');
+	}
+
+	public function Ventas(){
+		if($_SESSION['cve_perfil'] == '001') {
+			echo $this->templates->render('ventas');
 		} else {
-			$sitemap = "
-				<li><a href='index.html'>Home</a></li>
-				<li><a href='generic.html'>Info de la Industria</a></li>
-				<li>
-					<span class='opener'>Submenu</span>
-					<ul>
-						<li><a href='#'>Lorem Dolor</a></li>
-						<li><a href='#'>Ipsum Adipiscing</a></li>
-						<li><a href='#'>Tempus Magna</a></li>
-						<li><a href='#'>Feugiat Veroeros</a></li>
-					</ul>
-				</li>
-					<span class='opener'>Another Submenu</span>
-					<ul>
-						<li><a href='#'>Lorem Dolor</a></li>
-						<li><a href='#'>Ipsum Adipiscing</a></li>
-						<li><a href='#'>Tempus Magna</a></li>
-						<li><a href='#'>Feugiat Veroeros</a></li>
-					</ul>
-				</li>
-				<li><a href='#'>Fianzas</a></li>
-			";
+			show_404();
 		}
-		echo $this->templates->render('inicio', ['sitemap'=>$sitemap]);
+	}
+
+	public function Info(){
+		echo $this->templates->render('info');
 	}
 
 }

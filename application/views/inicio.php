@@ -1,4 +1,4 @@
-<?php $this->layout('master', ['title'=>'Editorial', 'sitemap'=>$sitemap])?>
+<?php $this->layout('master', ['title'=>'Editorial'])?>
 <?php $this->start('extra_style')?>
 
 <?php $this->stop()?>
