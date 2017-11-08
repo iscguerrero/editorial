@@ -1,6 +1,6 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Gl_Asignacion_De_Permisos extends Base_Model{
+class Gl_Asignacion_De_Permisos extends CI_Model{
 	function construct(){
 		parent::__construct();
 	}

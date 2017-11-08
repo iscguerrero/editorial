@@ -6,19 +6,20 @@ class Base_Controller extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		# Cargamos la base de datos por defecto
-			#$this->load->database();
+			$this->load->database();
 		# Cargamos Helpers basicos
 			$this->load->helper(array('url','form', 'date'));
 		# Cargamos la libreria para la validacion de los formularios
-			#$this->load->library(array('form_validation', 'session', 'encrypt'));
+			$this->load->library(array('form_validation', 'session', 'encrypt'));
 		# Configuracion inicial del motor de plantillas Plates
 			$this->templates = new League\Plates\Engine(APPPATH . '/views');
-			#$this->templates->addFolder('partials', APPPATH . '/views/partials');
+			$this->templates->addFolder('partials', APPPATH . '/views/partials');
 		# Comprobamos que exista una sesion de usuario creada
-			#if($this->session->userdata('logueado') == false) redirect(base_url('/'));
+			if($this->session->userdata('logueado') == false) redirect(base_url('/'));
 		# Seteamos la clave de usuario en variables globales
-			#$this->created_user = $this->session->userdata() ? $this->session->userdata('cve_usuario') : null;
-			#$this->updated_user = $this->session->userdata() ? $this->session->userdata('cve_usuario') : null;
+			$this->created_user = $this->session->userdata() ? $this->session->userdata('cve_usuario') : null;
+			$this->updated_user = $this->session->userdata() ? $this->session->userdata('cve_usuario') : null;
+			unset($_POST['error_inicio']);
 	}
 
 	# Funcion para formatear la fecha a formato Y-m-d

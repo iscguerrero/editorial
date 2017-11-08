@@ -6,34 +6,36 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php echo $this->e($title)?></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="<?php echo base_url('resources/font-awesome/css/font-awesome.min.css')?>">
 		<link rel="stylesheet" href="<?php echo base_url('resources/css/main.css')?>">
+		<link rel="stylesheet" href="<?php echo base_url('resources/toastr/toastr.min.css')?>">
 		<?php echo $this->section('extra_style')?>
 	</head>
 	<body>
-
-
 			<div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+			<!-- Main -->
+				<div id="main">
+					<div class="inner">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Editorial</strong> </a>
-									<ul class="icons">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
+						<!-- Header -->
+							<header id="header">
+								<a href="index.html" class="logo"><strong>Editorial</strong> </a>
+								<ul class="icons">
+									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+									<li><a href="<?php echo base_url('Login/Salir') ?>"><i class="fa fa-site"></i>Salir</a></li>
+								</ul>
+							</header>
 
-								<?php echo $this->section('page')?>
+							<?php echo $this->section('page')?>
 
-						</div>
 					</div>
+				</div>
 
 				<!-- Sidebar -->
 					<div id="sidebar">
@@ -50,36 +52,10 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-										<h2>Menu</h2>
+										<h2>Hola <?php echo $_SESSION['nickname'] ?>!</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="generic.html">Info de la Industria</a></li>
-										<li><a href="elements.html">Administracion</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Recursos Humanos</a></li>
-										<li><a href="#">Logistica</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Produccion</a></li>
-										<li><a href="#">Ventas</a></li>
-										<li><a href="#">Tesoreria</a></li>
-										<li><a href="#">Fianzas</a></li>
+										<?php echo $this->e($sitemap)?>
 									</ul>
 								</nav>
 
@@ -132,11 +108,13 @@
 			</div>
 
 
-
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="<?php echo base_url('resources/js/jquery.min.js')?>"></script>
 		<script src="<?php echo base_url('resources/js/skel.min.js')?>"></script>
 		<script src="<?php echo base_url('resources/js/util.js')?>"></script>
 		<script src="<?php echo base_url('resources/js/main.js')?>"></script>
+		<script src="<?php echo base_url('resources/toastr/toastr.min.js')?>"></script>
 		<?php echo $this->section('extra_js')?>
 	</body>
 </html>
